@@ -289,6 +289,7 @@ function getText(css) {
 }
 window.crc32 = crc32
 function getSubTable(str) {
+    console.log(hex_md5(str));
     console.log(crc32(hex_md5(str)) >> 16 & 0xffff)
 }
 _function.crc32=crc32;
