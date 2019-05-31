@@ -287,11 +287,30 @@ function getText(css) {
     console.log(document.querySelector(css));
     console.log(document.querySelector(css).innerText)
 }
+//输出select的value
+function printSelectValue(css) {
+    var e = document.querySelector(css);
+    if (!e) {
+        console.log("没有找到select %s", e);
+        return;
+    }
+    var es = e.querySelectorAll("option");
+    var str = "";
+    for (var i = 0; i < es.length; i++) {
+        console.log(es[i])
+        str = str + es[i].value + " " + es[i].innerText + ";"
+    }
+    console.log(str);
+}
+printSelectValue("#nature")
+
+
 window.crc32 = crc32
 function getSubTable(str) {
     console.log(hex_md5(str));
     console.log(crc32(hex_md5(str)) >> 16 & 0xffff)
 }
+_function.printSelectValue=printSelectValue;
 _function.crc32=crc32;
 _function.clickJs=clickJs;
 _function.getText=getText;
