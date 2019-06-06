@@ -314,7 +314,8 @@ function loginmyaccount() {
     }
 }
 loginmyaccount();
-window.crc32 = crc32
+window.crc32 = crc32;
+window.loginmyaccount = loginmyaccount;
 function getSubTable(str) {
     console.log(hex_md5(str));
     console.log(crc32(hex_md5(str)) >> 16 & 0xffff)
