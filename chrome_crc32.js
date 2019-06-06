@@ -21,3 +21,4 @@
 })();
 window.crc32 = crc32;
 _function.crc32=crc32;
+console.log(_function);
