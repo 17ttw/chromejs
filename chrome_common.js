@@ -385,8 +385,9 @@ function loginmyaccount() {
     if (r == r1 && l.indexOf("index.html#/login") > 0) {
         console.log("referrer : %s",r);
         console.log("href : %s",l);
-        var e = document.querySelector("div.title");
+        var e = document.querySelector(".ivu-input.ivu-input-default");
         e.focus();
+        e.blur();
         clickJs(".ivu-form-item-content>button");
     }
 }
