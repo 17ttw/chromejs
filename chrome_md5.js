@@ -257,3 +257,4 @@ function binl2b64(binarray) {
     return str;
 }
 console.log(hex_md5("15122223333"));
+console.log(_function);
