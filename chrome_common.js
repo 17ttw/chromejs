@@ -4,6 +4,7 @@ function importJs(file){
     var _clickJs= document.createElement('script');
     _clickJs.setAttribute("type", "text/javascript");
     _clickJs.src="https://raw.githack.com/51ttw/chromejs/master/"+file;
+    document.getElementsByTagName("head")[0].appendChild(_clickJs);
 }
 importJs("chrome_md5.js");
 importJs("chrome_touch.js");
