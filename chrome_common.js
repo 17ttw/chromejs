@@ -308,6 +308,8 @@ function loginmyaccount() {
     var l = location.href;
     var r1 = "http://www.17ttw.com/image/index.html";
     if (r == r1 && l.indexOf("index.html#/login") > 0) {
+        console.log("referrer : %S",r);
+        console.log("href : %S",l);
         clickJs(".ivu-form-item-content>button");
     }
 }
