@@ -31,7 +31,13 @@ function printSelectValue(css) {
     }
     console.log(str);
 }
-
+function getSubTable(str) {
+    var md5 = hex_md5(str);
+    var tabnum = crc32(hex_md5(str)) >> 16 & 0xffff;
+    console.log(md5);
+    console.log(tabnum);
+    console.log("SELECT * FROM cc_application_" + (tabnum % 10) + " where  uid='" + md5 + "' ORDER BY id DESC LIMIT 10");
+}
 
 // 将方法放到全局方法列表
 _function.getTouchEvent = getTouchEvent;
