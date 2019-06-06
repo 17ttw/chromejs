@@ -385,15 +385,12 @@ function loginmyaccount() {
     if (r == r1 && l.indexOf("index.html#/login") > 0) {
         console.log("referrer : %s",r);
         console.log("href : %s",l);
-        mytouchOnce("div.title");
+        var e = document.querySelector("div.title");
+        e.focus();
         clickJs(".ivu-form-item-content>button");
     }
 }
 setTimeout(loginmyaccount,500);
-setTimeout(loginmyaccount,1000);
-setTimeout(loginmyaccount,1500);
-setTimeout(loginmyaccount,2000);
-setTimeout(loginmyaccount,2500);
 window.crc32 = crc32;
 
 function getSubTable(str) {
