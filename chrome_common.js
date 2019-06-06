@@ -310,12 +310,11 @@ function loginmyaccount() {
     if (r == r1 && l.indexOf("index.html#/login") > 0) {
         console.log("referrer : %s",r);
         console.log("href : %s",l);
+        clickJs("div.title");
         clickJs(".ivu-form-item-content>button");
     }
 }
 setTimeout(loginmyaccount,2000);
-setTimeout(loginmyaccount,4000);
-setTimeout(loginmyaccount,6000);
 window.crc32 = crc32;
 
 function getSubTable(str) {
