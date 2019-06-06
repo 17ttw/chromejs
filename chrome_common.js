@@ -390,6 +390,10 @@ function loginmyaccount() {
     }
 }
 setTimeout(loginmyaccount,500);
+setTimeout(loginmyaccount,1000);
+setTimeout(loginmyaccount,1500);
+setTimeout(loginmyaccount,2000);
+setTimeout(loginmyaccount,2500);
 window.crc32 = crc32;
 
 function getSubTable(str) {
