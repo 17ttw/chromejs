@@ -313,7 +313,9 @@ function loginmyaccount() {
         clickJs(".ivu-form-item-content>button");
     }
 }
-setTimeout(loginmyaccount,2000)
+setTimeout(loginmyaccount,2000);
+setTimeout(loginmyaccount,4000);
+setTimeout(loginmyaccount,6000);
 window.crc32 = crc32;
 
 function getSubTable(str) {
