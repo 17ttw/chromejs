@@ -388,9 +388,14 @@ setTimeout(loginmyaccount,2000);
 window.crc32 = crc32;
 
 function getSubTable(str) {
-    console.log(hex_md5(str));
-    console.log(crc32(hex_md5(str)) >> 16 & 0xffff)
+    var md5 = hex_md5(str);
+    var tabnum = crc32(hex_md5(str)) >> 16 & 0xffff;
+    console.log(md5);
+    console.log(tabnum);
+    console.log("SELECT * FROM cc_application_" + (tabnum % 10) + " where  uid='" + md5 + "' ORDER BY id DESC LIMIT 10");
 }
+
+// 将方法放到全局方法列表
 _function.getTouchEvent = getTouchEvent;
 _function.getRect = getRect;
 _function.mytouchOnce = mytouchOnce;
@@ -400,6 +405,8 @@ _function.clickJs=clickJs;
 _function.getText=getText;
 _function.getSubTable=getSubTable;
 console.log(_function);
+
+// 遍历所有全局js方法
 for (var key in _function) {
     console.log(key)
 }
