@@ -357,7 +357,12 @@ function getRect(e) {
 console.log("getRect init ok");
 console.log("mytouchUp init");
 
-function mytouchOnce(e) {
+function mytouchOnce(css) {
+    if (css == null || css == undefined) {
+        console.log('想触摸的元素css不存在 return');
+        return;
+    }
+    var e = document.querySelector(css);
     if (e == null || e == undefined) {
         console.log('想触摸的元素不存在 return');
         return;
