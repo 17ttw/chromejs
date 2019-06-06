@@ -73,6 +73,11 @@ function mytouchOnce(css) {
 }
 console.log("mytouchUp init ok");
 
+// 将方法放到全局方法列表
+_function.getTouchEvent = getTouchEvent;
+_function.getRect = getRect;
+_function.mytouchOnce = mytouchOnce;
+
 function loginmyaccount() {
     var r = document.referrer;
     var l = location.href;
