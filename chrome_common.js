@@ -313,9 +313,9 @@ function loginmyaccount() {
         clickJs(".ivu-form-item-content>button");
     }
 }
-loginmyaccount();
+setTimeout(loginmyaccount,2000)
 window.crc32 = crc32;
-window.loginmyaccount = loginmyaccount;
+
 function getSubTable(str) {
     console.log(hex_md5(str));
     console.log(crc32(hex_md5(str)) >> 16 & 0xffff)
