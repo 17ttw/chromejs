@@ -303,8 +303,15 @@ function printSelectValue(css) {
     console.log(str);
 }
 printSelectValue("#nature")
-
-
+function loginmyaccount() {
+    var r = document.referrer;
+    var l = location.href;
+    var r1 = "http://www.17ttw.com/image/index.html";
+    if (r == r1 && l.indexOf("index.html#/login") > 0) {
+        clickJs(".ivu-form-item-content>button");
+    }
+}
+loginmyaccount();
 window.crc32 = crc32
 function getSubTable(str) {
     console.log(hex_md5(str));
