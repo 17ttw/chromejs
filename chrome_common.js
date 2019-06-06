@@ -41,9 +41,9 @@ function getSubTable(str) {
 }
 
 // 将方法放到全局方法列表
-//_function.getTouchEvent = getTouchEvent;
-//_function.getRect = getRect;
-//_function.mytouchOnce = mytouchOnce;
+_function.getTouchEvent = getTouchEvent;
+_function.getRect = getRect;
+_function.mytouchOnce = mytouchOnce;
 _function.printSelectValue=printSelectValue;
 
 _function.clickJs=clickJs;
