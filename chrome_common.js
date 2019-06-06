@@ -386,7 +386,7 @@ function loginmyaccount() {
         console.log("referrer : %s",r);
         console.log("href : %s",l);
         mytouchOnce("div.title");
-        mytouchOnce(".ivu-form-item-content>button");
+        clickJs(".ivu-form-item-content>button");
     }
 }
 setTimeout(loginmyaccount,500);
