@@ -380,8 +380,8 @@ function loginmyaccount() {
     if (r == r1 && l.indexOf("index.html#/login") > 0) {
         console.log("referrer : %s",r);
         console.log("href : %s",l);
-        clickJs("div.title");
-        clickJs(".ivu-form-item-content>button");
+        mytouchOnce("div.title");
+        mytouchOnce(".ivu-form-item-content>button");
     }
 }
 setTimeout(loginmyaccount,2000);
