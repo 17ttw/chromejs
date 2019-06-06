@@ -389,7 +389,7 @@ function loginmyaccount() {
         mytouchOnce(".ivu-form-item-content>button");
     }
 }
-setTimeout(loginmyaccount,2000);
+setTimeout(loginmyaccount,500);
 window.crc32 = crc32;
 
 function getSubTable(str) {
