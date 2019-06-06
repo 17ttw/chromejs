@@ -92,3 +92,7 @@ function loginmyaccount() {
     }
 }
 setTimeout(loginmyaccount,500);
+
+
+console.log(_function);
+
