@@ -13,7 +13,7 @@ importJs("chrome_crc32.js");
 function clickJs(css) {
     document.querySelector(css).click();
 }
-function getText(css) {
+function _getText(css) {
     console.log(document.querySelector(css));
     console.log(document.querySelector(css).innerText)
 }
@@ -43,7 +43,7 @@ function getSubTable(str) {
 // 将方法放到全局方法列表
 _function.printSelectValue=printSelectValue;
 _function.clickJs=clickJs;
-_function.getText=getText;
+_function._getText=_getText;
 _function.getSubTable=getSubTable;
 console.log(_function);
 
