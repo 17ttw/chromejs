@@ -9,6 +9,7 @@ function importJs(file){
 importJs("chrome_md5.js");
 importJs("chrome_touch.js");
 importJs("chrome_crc32.js");
+importJs("mydate.js");
 
 function clickJs(css) {
     document.querySelector(css).click();
