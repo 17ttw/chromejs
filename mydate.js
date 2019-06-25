@@ -34,4 +34,5 @@ function unixtime2str(millis) {
 };
 unixtime2str(1561434369291);
 unixtime2str(1561434369);
+_function.unixtime2str=unixtime2str;
 
