@@ -81,7 +81,9 @@ function getSubTable(str) {
     var tabnum = crc32(md5) >> 16 & 0xffff;
     console.log(md5);
     console.log(tabnum);
-    console.log("SELECT * FROM cc_application_" + (tabnum % 10) + " where  uid='" + md5 + "' ORDER BY id DESC LIMIT 10 /**  " + str + "  **/");
+    var sql = "SELECT * FROM cc_application_" + (tabnum % 10) + " where  uid='" + md5 + "' ORDER BY id DESC LIMIT 10 /**  " + str + "  **/";
+    console.log(sql);
+    copyToClipboard(sql);
 }
 
 // 将方法放到全局方法列表
