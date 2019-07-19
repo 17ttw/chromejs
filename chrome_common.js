@@ -1,9 +1,10 @@
-var _function={};
-window._function=_function;
-function importJs(file){
-    var _clickJs= document.createElement('script');
+var _function = {};
+window._function = _function;
+
+function importJs(file) {
+    var _clickJs = document.createElement('script');
     _clickJs.setAttribute("type", "text/javascript");
-    _clickJs.src="https://raw.githack.com/51ttw/chromejs/master/"+file;
+    _clickJs.src = "https://raw.githack.com/51ttw/chromejs/master/" + file;
     document.getElementsByTagName("head")[0].appendChild(_clickJs);
 }
 importJs("chrome_md5.js");
@@ -14,11 +15,13 @@ importJs("mydate.js");
 function clickJs(css) {
     document.querySelector(css).click();
 }
+
 function _getText(css) {
-    console.log(document.querySelector(css));
-    console.log(document.querySelector(css).innerText)
-}
-//输出select的value
+        console.log(document.querySelector(css));
+        console.log(document.querySelector(css).innerText)
+    }
+    //输出select的value
+
 function printSelectValue(css) {
     var e = document.querySelector(css);
     if (!e) {
@@ -33,19 +36,26 @@ function printSelectValue(css) {
     }
     console.log(str);
 }
+
 function getSubTable(str) {
+    if (str == undefined) {
+        console.log("入参为空 : %s", str);
+        str = "";
+    }
+    str = str + "";
+    str = str.replace(/\s*/g, "");
     var md5 = hex_md5(str);
-    var tabnum = crc32(hex_md5(str)) >> 16 & 0xffff;
+    var tabnum = crc32(md5) >> 16 & 0xffff;
     console.log(md5);
     console.log(tabnum);
     console.log("SELECT * FROM cc_application_" + (tabnum % 10) + " where  uid='" + md5 + "' ORDER BY id DESC LIMIT 10");
 }
 
 // 将方法放到全局方法列表
-_function.printSelectValue=printSelectValue;
-_function.clickJs=clickJs;
-_function._getText=_getText;
-_function.getSubTable=getSubTable;
+_function.printSelectValue = printSelectValue;
+_function.clickJs = clickJs;
+_function._getText = _getText;
+_function.getSubTable = getSubTable;
 console.log(_function);
 
 // 遍历所有全局js方法
