@@ -81,7 +81,8 @@ function getSubTable(str) {
     var tabnum = crc32(md5) >> 16 & 0xffff;
     console.log(md5);
     console.log(tabnum);
-    var sql = "SELECT * FROM cc_application_" + (tabnum % 10) + " where  uid='" + md5 + "' ORDER BY id DESC LIMIT 10 /**  " + str + "  **/";
+    var sql = "/** " + str + "  **/\n";
+    sql = sql + "    SELECT * FROM cc_application_" + (tabnum % 10) + " where  uid='" + md5 + "' ORDER BY id DESC LIMIT 10 ";
     console.log(sql);
     copyToClipboard(sql);
 }
