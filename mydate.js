@@ -1,4 +1,4 @@
-Date.prototype.__format = function (fmt) {
+Date.prototype.______format = function (fmt) {
     var o = {
         "M+": this.getMonth() + 1, //月份
         "d+": this.getDate(), //日
@@ -26,7 +26,7 @@ function unixtime2str(millis) {
         millis = millis * 1000
     }
     var date = new Date(millis);
-    var datestr = date.__format("yyyy-MM-dd hh:mm:ss");
+    var datestr = date.______format("yyyy-MM-dd hh:mm:ss");
     console.log(date);
     console.log(datestr);
     return datestr;
